@@ -20,6 +20,7 @@ export const Home: React.FC = () => {
                             Привет, я
                         </Typography>
                     </MessageBgStyles>
+
                     <Typography variant="h3" color="white" sx={{ mt: 2, mb: 2 }}>
                         Назаренко Николай
                     </Typography>

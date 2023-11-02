@@ -1,5 +1,6 @@
 import { Container } from '@mui/material';
 import React from 'react';
+import { Fade } from 'react-awesome-reveal';
 
 import { AboutMe } from './components/AboutMe/AboutMe';
 import { Experience } from './components/Experience/Experience';
@@ -13,11 +14,13 @@ export const App = () => {
         <>
             <NavBar />
             <Container sx={{ mt: '69px', color: 'white' }}>
-                <Home />
-                <AboutMe />
-                <MyProjects />
-                <Skills />
-                <Experience />
+                <Fade duration={1500}>
+                    <Home />
+                    <AboutMe />
+                    <MyProjects />
+                    <Skills />
+                    <Experience />
+                </Fade>
             </Container>
         </>
     );
