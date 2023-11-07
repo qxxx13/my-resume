@@ -3,6 +3,7 @@ import React from 'react';
 
 import { CircularProgressWithLabel } from './CircularProgressWithLabel';
 import { LinearProgressWithLabel } from './LinearProgressWithLabel';
+import { SoftSkills, TechnicalSkills } from './SkillsItems';
 
 export const Skills: React.FC = () => {
     return (
@@ -12,10 +13,9 @@ export const Skills: React.FC = () => {
                     Технические навыки
                 </Typography>
                 <Stack>
-                    <LinearProgressWithLabel value={40} description="JavaScript" />
-                    <LinearProgressWithLabel value={40} description="TypeScript" />
-                    <LinearProgressWithLabel value={40} description="React" />
-                    <LinearProgressWithLabel value={40} description="Redux" />
+                    {TechnicalSkills.map((tSkill, index) => (
+                        <LinearProgressWithLabel value={tSkill.value} description={tSkill.title} key={index} />
+                    ))}
                 </Stack>
             </Box>
             <Box sx={{ width: '50%' }}>
@@ -30,10 +30,9 @@ export const Skills: React.FC = () => {
                         justifyItems: 'center',
                     }}
                 >
-                    <CircularProgressWithLabel value={40} description="Коммуникативность" />
-                    <CircularProgressWithLabel value={40} description="Ответственность" />
-                    <CircularProgressWithLabel value={40} description="Командная работа" />
-                    <CircularProgressWithLabel value={40} description="Обучаемость" />
+                    {SoftSkills.map((sSkill, index) => (
+                        <CircularProgressWithLabel value={sSkill.value} description={sSkill.title} key={index} />
+                    ))}
                 </Box>
             </Box>
         </Stack>

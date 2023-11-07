@@ -1,16 +1,15 @@
 import GitHubIcon from '@mui/icons-material/GitHub';
 import PreviewIcon from '@mui/icons-material/Preview';
-import { Box, IconButton, Paper, Stack, Typography } from '@mui/material';
+import { Box, Button, Chip, Paper, Stack, Typography } from '@mui/material';
 import React from 'react';
 
 import { MyProjectsType } from '../../models/MyProjectsModel';
-import { SkillBoxStyled } from '../../styles/SkillBoxStyles';
 
 type MyProjectItemProps = {
     item: MyProjectsType;
 };
 
-export const MyProjectItem: React.FC<MyProjectItemProps> = (props) => {
+export const MyProjectsCard: React.FC<MyProjectItemProps> = (props) => {
     const coreTechologies = props.item.coreTechnologies.split(' ');
 
     return (
@@ -32,21 +31,21 @@ export const MyProjectItem: React.FC<MyProjectItemProps> = (props) => {
                 </Typography>
                 <Stack flexDirection="row" useFlexGap sx={{ mb: 2 }}>
                     {coreTechologies.map((technology, index) => (
-                        <SkillBoxStyled key={index}>{technology}</SkillBoxStyled>
+                        <Chip key={index} variant="outlined" label={technology} />
                     ))}
                 </Stack>
-                <IconButton sx={{ width: 'fit-content', borderRadius: 'none' }}>
+                <Button sx={{ width: 'fit-content' }}>
                     <GitHubIcon />
                     <Typography variant="body1" sx={{ ml: 1 }}>
                         Смотреть на GitHub
                     </Typography>
-                </IconButton>
-                <IconButton sx={{ width: 'fit-content', borderRadius: 'none' }}>
+                </Button>
+                <Button sx={{ width: 'fit-content' }}>
                     <PreviewIcon />
                     <Typography variant="body1" sx={{ ml: 1 }}>
                         Перейти на GitHubPages
                     </Typography>
-                </IconButton>
+                </Button>
             </Stack>
         </Paper>
     );

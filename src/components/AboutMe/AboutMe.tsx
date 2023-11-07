@@ -1,14 +1,14 @@
-import { Box, Stack, Typography } from '@mui/material';
+import { Box, Chip, Stack, Typography } from '@mui/material';
 import React from 'react';
 
-import AboutMeLogo from '../../common/img/AboutMePageImg/AboutMeImg.png';
-import { SkillBoxStyled } from '../../styles/SkillBoxStyles';
-import { WhatiDoBlock } from './WhatIDoBlock';
+import AboutMeLogo from '../../common/img/AboutMeImage.png';
+import { MainSkills } from './MainSkills';
+import { WhatIDoList } from './WhatIDo/WhatIDoList';
 
 export const AboutMe: React.FC = () => {
     return (
         <>
-            <Stack sx={{ mt: 15 }} flexDirection="row" justifyContent="space-between">
+            <Stack sx={{ mt: '100px' }} flexDirection="row" justifyContent="space-between">
                 <Box>
                     <img src={AboutMeLogo} alt="aboutMe-img" height={330} width={540} />
                 </Box>
@@ -21,14 +21,13 @@ export const AboutMe: React.FC = () => {
                         основные навыки:
                     </Typography>
                     <Box sx={{ display: 'inline-flex', mt: 3 }}>
-                        <SkillBoxStyled>JavaScript</SkillBoxStyled>
-                        <SkillBoxStyled>TypeScript</SkillBoxStyled>
-                        <SkillBoxStyled>React</SkillBoxStyled>
-                        <SkillBoxStyled>Redux</SkillBoxStyled>
+                        {MainSkills.map((skill, index) => (
+                            <Chip variant="outlined" label={skill} key={index} />
+                        ))}
                     </Box>
                 </Box>
             </Stack>
-            <WhatiDoBlock />
+            <WhatIDoList />
         </>
     );
 };

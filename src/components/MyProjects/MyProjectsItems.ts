@@ -1,6 +1,6 @@
 import { MyProjectsType } from '../../models/MyProjectsModel';
 
-export const items: MyProjectsType[] = [
+export const MyProjectsItems: MyProjectsType[] = [
     {
         id: 1,
         name: 'Films-Api-App',

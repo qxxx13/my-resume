@@ -5,13 +5,14 @@ import TelegramIcon from '@mui/icons-material/Telegram';
 import { Box, Stack, Typography } from '@mui/material';
 import React from 'react';
 
-import MainPageBgImg from '../../common/img/MainPageImg/MainPageBGImg.jpg';
+import MainPageBgImg from '../../common/img/BgImage.jpg';
+import TrueSigmaImg from '../../common/img/TrueSigma.jpg';
 import { LinkButtonStyle, StyledLink } from '../../styles/LinkStyles';
 import { MessageBgStyles } from '../../styles/MessageBgStyles';
 
 export const Home: React.FC = () => {
     return (
-        <Stack flexDirection="row" justifyContent="space-between" sx={{ paddingTop: 15 }}>
+        <Stack flexDirection="row" justifyContent="space-between">
             <img src={MainPageBgImg} alt="background" className="MainPage-bg" />
             <Stack>
                 <Box>
@@ -53,7 +54,13 @@ export const Home: React.FC = () => {
                 </Box>
             </Stack>
             <Box>
-                <Box sx={{ width: 400, height: 400, borderRadius: '50%', bgcolor: 'green' }}></Box>
+                <img
+                    src={TrueSigmaImg}
+                    alt="true sigma"
+                    height={400}
+                    width={400}
+                    style={{ borderRadius: '50%', boxShadow: '1px 1px 20px 8px green' }}
+                ></img>
             </Box>
         </Stack>
     );
