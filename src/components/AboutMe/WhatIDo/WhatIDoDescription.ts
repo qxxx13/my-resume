@@ -3,14 +3,14 @@ import { WhatIDoDescriptionType } from '../../../models/WhatIDoDescriptionModel'
 export const WhatIDoDescriptions: WhatIDoDescriptionType[] = [
     {
         Title: 'Web-Разработка',
-        Description: 'Описание',
+        Description: 'Разработка Web-приложений с помощью React+Redux',
     },
     {
-        Title: 'Web-Разработка',
-        Description: 'Описание',
+        Title: 'Реклама',
+        Description: 'Реклама',
     },
     {
-        Title: 'Web-Разработка',
-        Description: 'Описание',
+        Title: 'Тестирование',
+        Description: 'Тестирование web-сервисов',
     },
 ];

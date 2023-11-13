@@ -1,25 +1,14 @@
 import { Link, styled } from '@mui/material';
 
-export const StyledLink = styled(Link)({
-    display: 'flex',
-    textDecoration: 'none',
-    width: 'fit-content',
-    color: 'white',
-    alignItems: 'center',
-    marginTop: 10,
-    '&:hover': {
-        color: 'blue',
-    },
-});
-
 export const LinkButtonStyle = styled(Link)({
-    padding: '10px 10px',
-    marginRight: 10,
+    padding: '10px',
+    display: 'flex',
+    width: 'fit-content',
     transition: '0.3s',
     borderRadius: 2,
-    textAlign: 'center',
+    textDecoration: 'none',
     '&:hover': {
-        backgroundColor: 'white',
-        color: 'green',
+        backgroundColor: '#90caf9',
+        color: 'white',
     },
 });

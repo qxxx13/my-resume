@@ -1,10 +1,19 @@
-import { Box, CircularProgress, CircularProgressProps, Typography } from '@mui/material';
+import { Box, CircularProgressProps, Typography } from '@mui/material';
+import React from 'react';
 
-export const CircularProgressWithLabel = (props: CircularProgressProps & { value: number; description: string }) => {
+import { StyledCircularProgress } from '../../styles/StyledCircularProgress';
+
+type CircularProgressWithLabelWithLabelProps = {
+    props?: CircularProgressProps;
+    sSkill: { value: number; title: string };
+};
+
+export const CircularProgressWithLabel: React.FC<CircularProgressWithLabelWithLabelProps> = (props) => {
+    const toValue = 126.92 / (100 / (100 - props.sSkill.value));
     return (
-        <Box>
+        <Box className="skills">
             <Box sx={{ position: 'relative', display: 'inline-flex' }}>
-                <CircularProgress variant="determinate" {...props} size={100} />
+                <StyledCircularProgress variant="determinate" size={100} toValue={`${toValue}`} />
                 <Box
                     sx={{
                         top: 0,
@@ -18,11 +27,11 @@ export const CircularProgressWithLabel = (props: CircularProgressProps & { value
                     }}
                 >
                     <Typography variant="caption" component="div" color="text.secondary">
-                        {props.value}%
+                        {props.sSkill.value}%
                     </Typography>
                 </Box>
             </Box>
-            <Typography variant="body1">{props.description}</Typography>
+            <Typography variant="body1">{props.sSkill.title}</Typography>
         </Box>
     );
 };

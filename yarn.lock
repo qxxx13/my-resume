@@ -914,10 +914,20 @@ chalk@^4.0.0:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
+clsx@^1.1.1:
+  version "1.2.1"
+  resolved "https://registry.npmjs.org/clsx/-/clsx-1.2.1.tgz"
+  integrity sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==
+
 clsx@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/clsx/-/clsx-2.0.0.tgz"
   integrity sha512-rQ1+kcj+ttHG0MKVGBUXwayCCF1oh39BF5COIpRzuCEv8Mwjv0XucrI2ExNTOn9IlLifGClWQcU9BrZORvtw6Q==
+
+cnbuilder@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/cnbuilder/-/cnbuilder-3.1.0.tgz"
+  integrity sha512-9sxWwwprkPNTVQnx92WYPEWCmyZRqbf9VWUYABU4rl0mLL17VAV2MvvOApkMA6bQVXRLJ8jN//8Yp6drElpLWA==
 
 color-convert@^1.9.0:
   version "1.9.3"
@@ -2177,7 +2187,7 @@ queue-microtask@^1.2.2:
   resolved "https://registry.npmjs.org/queue-microtask/-/queue-microtask-1.2.3.tgz"
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
 
-react-awesome-reveal@^4.2.6:
+react-awesome-reveal@4.2.6:
   version "4.2.6"
   resolved "https://registry.npmjs.org/react-awesome-reveal/-/react-awesome-reveal-4.2.6.tgz"
   integrity sha512-evLf+g65W8UvSccTtWwY8WfrHJdePN9GWXUByGzEgWNpXgIY+6HU/lw+w7D5wGQXLiHTPg+v+8RD4hbp9Gi/bQ==
@@ -2185,7 +2195,7 @@ react-awesome-reveal@^4.2.6:
     react-intersection-observer "^9.5.2"
     react-is "^18.2.0"
 
-"react-dom@^17.0.0 || ^18.0.0", "react-dom@^17.0.2 || ^18.0.0", react-dom@>=16.6.0, "react-dom@>=16.8 || ^17.0.0", react-dom@>=16.8.0, react-dom@17.0.2:
+"react-dom@^17.0.0 || ^18.0.0", "react-dom@^17.0.2 || ^18.0.0", "react-dom@>= 16.3.0", react-dom@>=16.6.0, "react-dom@>=16.8 || ^17.0.0", react-dom@>=16.8.0, react-dom@17.0.2:
   version "17.0.2"
   resolved "https://registry.npmjs.org/react-dom/-/react-dom-17.0.2.tgz"
   integrity sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA==
@@ -2193,6 +2203,14 @@ react-awesome-reveal@^4.2.6:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     scheduler "^0.20.2"
+
+react-draggable@^4.4.5:
+  version "4.4.6"
+  resolved "https://registry.npmjs.org/react-draggable/-/react-draggable-4.4.6.tgz"
+  integrity sha512-LtY5Xw1zTPqHkVmtM3X8MUOxNDOUhv/khTgBgrUvwaS064bwVvxT+q5El0uUFNx5IEPKXuRejr7UqLwBIg5pdw==
+  dependencies:
+    clsx "^1.1.1"
+    prop-types "^15.8.1"
 
 react-intersection-observer@^9.5.2:
   version "9.5.2"
@@ -2226,6 +2244,15 @@ react-refresh@^0.13.0:
   resolved "https://registry.npmjs.org/react-refresh/-/react-refresh-0.13.0.tgz"
   integrity sha512-XP8A9BT0CpRBD+NYLLeIhld/RqG9+gktUjW1FkE+Vm7OCinbG1SshcK5tb9ls4kzvjZr9mOQc7HYgBngEyPAXg==
 
+react-scrollbars-custom@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.npmjs.org/react-scrollbars-custom/-/react-scrollbars-custom-4.1.1.tgz"
+  integrity sha512-FOI1EMrdN5qziwvFAuH4saOo0+ggxeTuKLPpy6nezNdLUnDW1vCHGq0VSSfTSRstDgfXgwff5TMP9NeJ8NiFOQ==
+  dependencies:
+    cnbuilder "^3.1.0"
+    react-draggable "^4.4.5"
+    zoom-level "^2.5.0"
+
 react-transition-group@^4.4.5:
   version "4.4.5"
   resolved "https://registry.npmjs.org/react-transition-group/-/react-transition-group-4.4.5.tgz"
@@ -2236,7 +2263,7 @@ react-transition-group@^4.4.5:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
-"react@^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0", "react@^17.0.0 || ^18.0.0", "react@^17.0.1 || ^18.0.0", react@>=16.14.0, react@>=16.6.0, "react@>=16.8 || ^17.0.0", react@>=16.8.0, react@17.0.2:
+"react@^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0", "react@^17.0.0 || ^18.0.0", "react@^17.0.1 || ^18.0.0", "react@>= 16.3.0", react@>=16.0.0, react@>=16.14.0, react@>=16.6.0, "react@>=16.8 || ^17.0.0", react@>=16.8.0, react@17.0.2:
   version "17.0.2"
   resolved "https://registry.npmjs.org/react/-/react-17.0.2.tgz"
   integrity sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA==
@@ -2667,3 +2694,8 @@ yaml@^1.10.0:
   version "1.10.2"
   resolved "https://registry.npmjs.org/yaml/-/yaml-1.10.2.tgz"
   integrity sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==
+
+zoom-level@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.npmjs.org/zoom-level/-/zoom-level-2.5.0.tgz"
+  integrity sha512-7UlRWU4Q3uCMCeDVMOm7eBrIu145OqsIJ3p6zq58l8UsSYwKWxc6zEapC5YA9tIeh0oheb4cT9Kk2Wq353loFg==

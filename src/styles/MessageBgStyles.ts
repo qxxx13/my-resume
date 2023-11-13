@@ -5,4 +5,5 @@ export const MessageBgStyles = styled(Paper)({
     padding: '10px 30px',
     borderRadius: '20px 20px 20px 0',
     width: 'fit-content',
+    backgroundColor: '#306087',
 });

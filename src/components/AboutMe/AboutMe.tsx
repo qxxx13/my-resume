@@ -20,7 +20,7 @@ export const AboutMe: React.FC = () => {
                         Привет, меня зовут Николай, я студент 4 курса. Занимаюсь React-Frontend разработкой. Мои
                         основные навыки:
                     </Typography>
-                    <Box sx={{ display: 'inline-flex', mt: 3 }}>
+                    <Box sx={{ display: 'inline-flex', mt: 3, flexWrap: 'wrap', gap: '5px' }}>
                         {MainSkills.map((skill, index) => (
                             <Chip variant="outlined" label={skill} key={index} />
                         ))}

@@ -1,6 +1,7 @@
 import { Container } from '@mui/material';
 import React from 'react';
 import { Fade } from 'react-awesome-reveal';
+import { Scrollbar } from 'react-scrollbars-custom';
 
 import { AboutMe } from './components/AboutMe/AboutMe';
 import { Experience } from './components/Experience/Experience';
@@ -10,14 +11,16 @@ import { Skills } from './components/Skills/Skills';
 
 export const App = () => {
     return (
-        <Container sx={{ color: 'white', mt: 6 }}>
-            <Fade duration={1500}>
-                <Home />
-                <AboutMe />
-                <MyProjects />
-                <Skills />
-                <Experience />
-            </Fade>
-        </Container>
+        <Scrollbar style={{ width: '100vw', height: '100vh' }}>
+            <Container sx={{ color: 'white', mt: 6 }}>
+                <Fade duration={1000}>
+                    <Home />
+                    <AboutMe />
+                    <MyProjects />
+                    <Skills />
+                    <Experience />
+                </Fade>
+            </Container>
+        </Scrollbar>
     );
 };

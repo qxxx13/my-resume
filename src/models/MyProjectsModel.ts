@@ -6,4 +6,5 @@ export type MyProjectsType = {
     description: string;
     livePreviewLink: string;
     coreTechnologies: string;
+    img: string;
 };

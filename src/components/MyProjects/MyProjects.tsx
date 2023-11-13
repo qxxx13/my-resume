@@ -8,12 +8,12 @@ import { MyProjectsItems } from './MyProjectsItems';
 
 export const MyProjects: React.FC = () => {
     return (
-        <Box sx={{ height: 450 }}>
+        <Box sx={{ minHeight: 500, mb: 2 }}>
             <img src={MainPageBgImg} alt="background" className="MyProjects-bg" />
             <Typography variant="h4" sx={{ textAlign: 'center', mb: 2 }}>
                 Мои проекты
             </Typography>
-            <Carousel>
+            <Carousel indicators swipe cycleNavigation navButtonsAlwaysVisible fullHeightHover autoPlay={false}>
                 {MyProjectsItems.map((item, index) => (
                     <MyProjectsCard key={index} item={item} />
                 ))}

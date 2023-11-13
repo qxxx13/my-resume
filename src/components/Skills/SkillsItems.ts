@@ -1,37 +1,45 @@
 export const TechnicalSkills = [
     {
+        value: 90,
+        title: 'HTML',
+    },
+    {
+        value: 90,
+        title: 'CSS',
+    },
+    {
+        value: 80,
         title: 'JavaScript',
-        value: 70,
     },
     {
+        value: 70,
         title: 'TypeScript',
-        value: 70,
     },
     {
+        value: 80,
         title: 'React',
-        value: 70,
     },
     {
+        value: 80,
         title: 'Redux',
-        value: 70,
     },
 ];
 
 export const SoftSkills = [
     {
+        value: 100,
         title: 'Коммуникативность',
-        value: 90,
     },
     {
+        value: 80,
         title: 'Ответсвенность',
-        value: 90,
     },
     {
+        value: 90,
         title: 'Коммандная работа',
-        value: 90,
     },
     {
+        value: 100,
         title: 'Обучаемость',
-        value: 90,
     },
 ];

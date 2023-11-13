@@ -1,1 +1,17 @@
-export const MainSkills = ['JavaScript', 'TypeScript', 'React', 'Redux'];
+export const MainSkills = [
+    'JavaScript',
+    'TypeScript',
+    'HTML',
+    'CSS',
+    'React',
+    'Redux',
+    'LESS/SCSS/SASS',
+    'StyledComponents',
+    'Redux-Saga',
+    'HTTP/HTTPS',
+    'Rest-Api',
+    'Material UI',
+    'Git',
+    'Scrum',
+    'Jest',
+];
