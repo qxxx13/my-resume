@@ -6,15 +6,24 @@ import WorkIcon from '@mui/icons-material/Work';
 import { Box, Stack, Tooltip, Typography } from '@mui/material';
 import React from 'react';
 
-import MainPageBgImg from '../../common/img/BgImage.jpg';
+import BgImage from '../../common/img/BgImage.jpg';
 import TrueSigmaImg from '../../common/img/TrueSigma.jpg';
+import { useFindHeightBlock } from '../../hooks/useFindHeightBlock';
 import { LinkButtonStyle } from '../../styles/LinkStyles';
 import { MessageBgStyles } from '../../styles/MessageBgStyles';
 
-export const Home: React.FC = () => {
+export const Home: React.FC<{ isDesktop: boolean }> = ({ isDesktop }) => {
+    const { ref, height } = useFindHeightBlock();
+
     return (
-        <Stack flexDirection="row" justifyContent="space-between">
-            <img src={MainPageBgImg} alt="background" className="MainPage-bg" />
+        <Stack
+            flexDirection={!isDesktop ? 'column-reverse' : 'row'}
+            justifyContent="space-between"
+            alignItems={'center'}
+            className="MainPage"
+            ref={ref}
+        >
+            <img src={BgImage} alt="background" className="Background" style={{ height: height + 48 }} />
             <Stack justifyContent="center">
                 <Box>
                     <MessageBgStyles elevation={10}>

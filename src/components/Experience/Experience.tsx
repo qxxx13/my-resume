@@ -1,30 +1,41 @@
 import { Box, Stack, Typography } from '@mui/material';
 import React from 'react';
 
-import MainPageBgImg from '../../common/img/BgImage.jpg';
+import BgImage3 from '../../common/img/BgImage3.jpg';
+import { useFindHeightBlock } from '../../hooks/useFindHeightBlock';
 import { ExperienceCard } from './ExperienceCard';
 import { EducationalExperience, WorkExperience } from './ExperienceItems';
 
-export const Experience: React.FC = () => {
+export const Experience: React.FC<{ isDesktop: boolean }> = ({ isDesktop }) => {
+    const { ref, height } = useFindHeightBlock();
+
     return (
-        <Stack flexDirection="row" useFlexGap justifyContent="space-between">
-            <img src={MainPageBgImg} alt="background" className="Expirience-bg" />
-            <Box sx={{ width: '50%' }}>
+        <Stack
+            flexDirection={isDesktop ? 'row' : 'column'}
+            gap="20px"
+            justifyContent="space-between"
+            alignItems={isDesktop ? 'flex-start' : 'center'}
+            ref={ref}
+            sx={{ mt: 2 }}
+        >
+            <img src={BgImage3} alt="background" className="Background" style={{ height: height }} />
+            <Box sx={{ width: '100%' }}>
                 <Typography variant="h4" textAlign="center">
                     Образование/курсы
                 </Typography>
-                <Stack alignItems="center">
+                <Stack>
                     {EducationalExperience.map((item, index) => (
                         <ExperienceCard
                             title={item.title}
                             years={item.years}
                             description={item.description}
                             key={index}
+                            responsibilities={item.responsibilities}
                         />
                     ))}
                 </Stack>
             </Box>
-            <Box sx={{ width: '50%' }}>
+            <Box sx={{ width: '100%' }}>
                 <Typography variant="h4" textAlign="center">
                     Опыт работы
                 </Typography>
@@ -35,6 +46,7 @@ export const Experience: React.FC = () => {
                             years={item.years}
                             description={item.description}
                             key={index}
+                            responsibilities={item.responsibilities}
                         />
                     ))}
                 </Stack>

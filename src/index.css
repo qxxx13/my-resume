@@ -12,35 +12,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-.MainPage-bg {
+.Background {
   position: absolute;
-  background-size: cover;
-  opacity: 0.1;
-  z-index: -1000;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 530px;
-}
-
-.MyProjects-bg {
-  position: absolute;
-  background-size: cover;
+  object-fit: cover;
   opacity: 0.1;
   z-index: -1000;
   left: 0;
   width: 100%;
-  height: 500px;
-}
-
-.Expirience-bg {
-  position: absolute;
-  background-size: cover;
-  opacity: 0.1;
-  z-index: -1000;
-  left: 0;
-  width: 100%;
-  height: 800px;
 }
 
 .ScrollbarsCustom-Thumb.ScrollbarsCustom-ThumbY {
