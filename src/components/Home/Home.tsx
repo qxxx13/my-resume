@@ -5,6 +5,7 @@ import TelegramIcon from '@mui/icons-material/Telegram';
 import WorkIcon from '@mui/icons-material/Work';
 import { Box, Stack, Tooltip, Typography } from '@mui/material';
 import React from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import BgImage from '../../common/img/BgImage.jpg';
 import TrueSigmaImg from '../../common/img/TrueSigma.jpg';
@@ -13,6 +14,7 @@ import { LinkButtonStyle } from '../../styles/LinkStyles';
 import { MessageBgStyles } from '../../styles/MessageBgStyles';
 
 export const Home: React.FC<{ isDesktop: boolean }> = ({ isDesktop }) => {
+    /* const BgImage = lazy(() => import('../../common/img/BgImage.jpg')); */
     const { ref, height } = useFindHeightBlock();
 
     return (
@@ -23,7 +25,7 @@ export const Home: React.FC<{ isDesktop: boolean }> = ({ isDesktop }) => {
             className="MainPage"
             ref={ref}
         >
-            <img
+            <LazyLoadImage
                 src={BgImage}
                 alt="background"
                 className="Background"

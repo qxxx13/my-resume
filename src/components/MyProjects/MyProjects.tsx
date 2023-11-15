@@ -1,5 +1,6 @@
 import { Box, Typography } from '@mui/material';
 import React from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import Carousel from 'react-material-ui-carousel';
 
 import BgImg2 from '../../common/img/BgImage2.jpg';
@@ -12,17 +13,18 @@ export const MyProjects: React.FC<{ isDesktop: boolean }> = ({ isDesktop }) => {
 
     return (
         <Box sx={{ mb: 2 }} ref={ref}>
-            <img src={BgImg2} alt="background" className="Background" style={{ height: height + 25 }} />
+            <LazyLoadImage src={BgImg2} alt="background" className="Background" style={{ height: height + 25 }} />
             <Typography variant="h4" sx={{ textAlign: 'center', mb: 2 }}>
                 Мои проекты
             </Typography>
             <Carousel
                 indicators
-                swipe
                 cycleNavigation
-                navButtonsAlwaysVisible={isDesktop ? true : false}
+                navButtonsAlwaysVisible
                 fullHeightHover
                 autoPlay={false}
+                swipe={false}
+                animation="slide"
             >
                 {MyProjectsItems.map((item, index) => (
                     <MyProjectsCard key={index} item={item} isDesktop={isDesktop} />

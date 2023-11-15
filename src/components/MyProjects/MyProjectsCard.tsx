@@ -2,6 +2,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import PreviewIcon from '@mui/icons-material/Preview';
 import { Box, Chip, Paper, Stack, Typography } from '@mui/material';
 import React from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import { MyProjectsType } from '../../models/MyProjectsModel';
 import { LinkButtonStyle } from '../../styles/LinkStyles';
@@ -18,7 +19,7 @@ export const MyProjectsCard: React.FC<MyProjectItemProps> = (props) => {
         <Paper sx={{ padding: 2, minHeight: 350 }} elevation={10}>
             <Stack flexDirection={props.isDesktop ? 'row' : 'column'}>
                 <Box sx={{ width: '100%' }}>
-                    <img
+                    <LazyLoadImage
                         src={props.item.img}
                         alt="projectPreview"
                         style={{ width: '100%', height: '100%', objectFit: 'cover' }}
