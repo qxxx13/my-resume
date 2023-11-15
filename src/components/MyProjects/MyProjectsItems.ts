@@ -1,4 +1,6 @@
 import FilmsApiAppImg from '../../common/img/ProjectsImg/FilmsApi-App.png';
+import IndexTestImg from '../../common/img/ProjectsImg/Index-Test.png';
+import RickAndMortyAppImg from '../../common/img/ProjectsImg/RickAndMorty-App.png';
 import { MyProjectsType } from '../../models/MyProjectsModel';
 
 export const MyProjectsItems: MyProjectsType[] = [
@@ -19,10 +21,10 @@ export const MyProjectsItems: MyProjectsType[] = [
         description:
             'Этот проект был создан с помощью Create React App, с использованием Context, TS шаблон. Это приложение позволяет пользователю просматривать продукты из базы данных Platzi Fake Store API. При нажатии на карточку, пользователь попадает на страницу описания продукта. Реализована кнопка смены вида карточек, информация о текущем виде карточек сохраняется в localStorage. Дизайн был взят из макета в Figma',
         gitHubLink: 'https://github.com/qxxx13/index-test',
-        livePreviewLink: 'https://google.com',
+        livePreviewLink: 'https://qxxx13.github.io/index-test/',
         preview: 'kirril',
         coreTechnologies: 'React React-Context MUI Axios',
-        img: FilmsApiAppImg,
+        img: IndexTestImg,
     },
     {
         id: 3,
@@ -30,9 +32,9 @@ export const MyProjectsItems: MyProjectsType[] = [
         description:
             'Этот проект был создан с помощью Create React App, с использованием Apollo Client TS шаблон. Это приложение позволяет пользователю производить поиск по базе данных Rick And Morty API. На каждой кароточке персонажа есть информация о том, в каких эпизодах он участвовал, его статус, пол и раса.',
         gitHubLink: 'https://github.com/qxxx13/RickAndMorty-app',
-        livePreviewLink: 'https://google.com',
+        livePreviewLink: 'https://qxxx13.github.io/RickAndMorty-app/',
         preview: 'kirril',
         coreTechnologies: 'React Apollo client MUI Axios',
-        img: FilmsApiAppImg,
+        img: RickAndMortyAppImg,
     },
 ];

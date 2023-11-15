@@ -15,14 +15,18 @@ export const MyProjectsCard: React.FC<MyProjectItemProps> = (props) => {
     const coreTechologies = props.item.coreTechnologies.split(' ');
 
     return (
-        <Paper sx={{ padding: 2, minHeight: 350 }}>
+        <Paper sx={{ padding: 2, minHeight: 350 }} elevation={10}>
             <Stack flexDirection={props.isDesktop ? 'row' : 'column'}>
-                <Box>
-                    <img src={props.item.img} alt="projectPreview" style={{ width: '100%', height: '100%' }} />
+                <Box sx={{ width: '100%' }}>
+                    <img
+                        src={props.item.img}
+                        alt="projectPreview"
+                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    />
                 </Box>
-                <Stack sx={{ ml: 2 }}>
+                <Stack sx={{ ml: 2, width: '100%' }}>
                     <Typography variant="h4">{props.item.name}</Typography>
-                    <Typography variant="body1" sx={{ mt: 2, maxHeight: 150, overflow: 'auto' }}>
+                    <Typography variant="body1" sx={{ mt: 2, maxHeight: 120, overflow: 'auto' }}>
                         {props.item.description}
                     </Typography>
                     <Typography variant="body1" sx={{ mt: 2 }}>

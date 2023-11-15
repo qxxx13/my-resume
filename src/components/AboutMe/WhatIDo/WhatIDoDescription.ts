@@ -1,16 +1,22 @@
+import JestIcon from '../../../common/icons/JestIcon.svg';
+import ReactIcon from '../../../common/icons/ReactIcon.svg';
+import ResponsiveDesignIcon from '../../../common/icons/ResponsiveDesignIcon.svg';
 import { WhatIDoDescriptionType } from '../../../models/WhatIDoDescriptionModel';
 
 export const WhatIDoDescriptions: WhatIDoDescriptionType[] = [
     {
-        Title: 'Web-Разработка',
-        Description: 'Разработка Web-приложений с помощью React+Redux',
+        title: 'Web-Разработка',
+        description: 'Разработка Web-приложений с помощью React',
+        iconUrl: ReactIcon,
     },
     {
-        Title: 'Реклама',
-        Description: 'Реклама',
+        title: 'Адаптивность',
+        description: 'Обеспечение оптимального отображения интерфейсов на устройствах с разным разрешением экранов',
+        iconUrl: ResponsiveDesignIcon,
     },
     {
-        Title: 'Тестирование',
-        Description: 'Тестирование web-сервисов',
+        title: 'Тестирование',
+        description: 'Тестирование web-сервисов при помощи jest',
+        iconUrl: JestIcon,
     },
 ];

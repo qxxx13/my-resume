@@ -1,4 +1,5 @@
 export type WhatIDoDescriptionType = {
-    Title: string;
-    Description: string;
+    title: string;
+    description: string;
+    iconUrl: string;
 };

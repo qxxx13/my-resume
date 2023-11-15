@@ -23,7 +23,12 @@ export const Home: React.FC<{ isDesktop: boolean }> = ({ isDesktop }) => {
             className="MainPage"
             ref={ref}
         >
-            <img src={BgImage} alt="background" className="Background" style={{ height: height + 48 }} />
+            <img
+                src={BgImage}
+                alt="background"
+                className="Background"
+                style={{ height: height + 48, objectFit: 'fill' }}
+            />
             <Stack justifyContent="center">
                 <Box>
                     <MessageBgStyles elevation={10}>
@@ -47,7 +52,7 @@ export const Home: React.FC<{ isDesktop: boolean }> = ({ isDesktop }) => {
                     <LinkButtonStyle href="https://t.me/qxxx13" target="_blank" sx={{ display: 'flex' }}>
                         <TelegramIcon />
                         <Typography variant="body1" sx={{ ml: 2 }}>
-                            89996952937
+                            8 999 695 29 37
                         </Typography>
                     </LinkButtonStyle>
                     <LinkButtonStyle

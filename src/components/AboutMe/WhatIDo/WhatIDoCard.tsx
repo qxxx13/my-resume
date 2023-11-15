@@ -1,26 +1,30 @@
-import { Card, CardContent, CardMedia, Grid, Typography } from '@mui/material';
+import { Card, CardContent, CardMedia, Grid, Stack, Typography } from '@mui/material';
 import React from 'react';
 
+import { WhatIDoDescriptionType } from '../../../models/WhatIDoDescriptionModel';
+
 type WhatIDoCardProps = {
-    iconUrl: string;
-    Title: string;
-    Description: string;
+    description: WhatIDoDescriptionType;
     isDesktop: boolean;
 };
 
-export const WhatIDoCard: React.FC<WhatIDoCardProps> = (props) => {
+export const WhatIDoCard: React.FC<WhatIDoCardProps> = ({ description, isDesktop }) => {
     return (
-        <Grid item xs={props.isDesktop ? 4 : 12} justifySelf="center">
-            <Card elevation={10}>
-                <CardMedia
-                    component="img"
-                    alt="webdevelopmentIcon"
-                    image={props.iconUrl}
-                    sx={{ width: 50, height: 50, paddingLeft: 2 }}
-                />
+        <Grid item xs={isDesktop ? 4 : 12} justifySelf="center">
+            <Card elevation={10} sx={{ padding: '16px 16px 0 16px', height: '100%' }}>
+                <Stack flexDirection="row" alignItems="center">
+                    <CardMedia
+                        component="img"
+                        alt="webdevelopmentIcon"
+                        image={description.iconUrl}
+                        sx={{ width: 50, height: 50, ml: 1 }}
+                    />
+                    <Typography variant="h5" sx={{ ml: 2 }}>
+                        {description.title}
+                    </Typography>
+                </Stack>
                 <CardContent>
-                    <Typography variant="h4">{props.Title}</Typography>
-                    <Typography variant="body2">{props.Description}</Typography>
+                    <Typography variant="body2">{description.description}</Typography>
                 </CardContent>
             </Card>
         </Grid>
