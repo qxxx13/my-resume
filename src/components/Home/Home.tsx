@@ -9,13 +9,12 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import BgImage from '../../common/img/BgImage.jpg';
 import TrueSigmaImg from '../../common/img/TrueSigma.jpg';
-import { useFindHeightBlock } from '../../hooks/useFindHeightBlock';
+import { useFindSizeBlock } from '../../hooks/useFindSizeBlock';
 import { LinkButtonStyle } from '../../styles/LinkStyles';
 import { MessageBgStyles } from '../../styles/MessageBgStyles';
 
 export const Home: React.FC<{ isDesktop: boolean }> = ({ isDesktop }) => {
-    /* const BgImage = lazy(() => import('../../common/img/BgImage.jpg')); */
-    const { ref, height } = useFindHeightBlock();
+    const { ref, height } = useFindSizeBlock();
 
     return (
         <Stack
@@ -85,7 +84,13 @@ export const Home: React.FC<{ isDesktop: boolean }> = ({ isDesktop }) => {
                 </Box>
             </Stack>
             <Box>
-                <img src={TrueSigmaImg} alt="true sigma" height={400} width={400} style={{ borderRadius: '50%' }} />
+                <img
+                    src={TrueSigmaImg}
+                    alt="true sigma"
+                    height={isDesktop ? 400 : 300}
+                    width={isDesktop ? 400 : 300}
+                    style={{ borderRadius: '50%' }}
+                />
             </Box>
         </Stack>
     );

@@ -3,12 +3,12 @@ import React from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import BgImage3 from '../../common/img/BgImage3.jpg';
-import { useFindHeightBlock } from '../../hooks/useFindHeightBlock';
+import { useFindSizeBlock } from '../../hooks/useFindSizeBlock';
 import { ExperienceCard } from './ExperienceCard';
 import { EducationalExperience, WorkExperience } from './ExperienceItems';
 
 export const Experience: React.FC<{ isDesktop: boolean }> = ({ isDesktop }) => {
-    const { ref, height } = useFindHeightBlock();
+    const { ref, height } = useFindSizeBlock();
 
     return (
         <Stack
