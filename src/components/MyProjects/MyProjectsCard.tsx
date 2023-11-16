@@ -14,7 +14,7 @@ type MyProjectItemProps = {
 };
 
 export const MyProjectsCard: React.FC<MyProjectItemProps> = (props) => {
-    const coreTechologies = props.item.coreTechnologies.split(' ');
+    const coreTechologies = props.item.coreTechnologies;
 
     return (
         <Box sx={{ width: props.width }}>
