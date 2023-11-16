@@ -8,6 +8,8 @@ export const Carousel: React.FC<{ children: ReactElement[] }> = ({ children }) =
         <ReactSimplyCarousel
             activeSlideIndex={activeSlideIndex}
             onRequestChange={setActiveSlideIndex}
+            disableSwipeByTouch={true}
+            disableSwipeByMouse={true}
             infinite
             centerMode
             itemsToShow={1}
@@ -15,10 +17,10 @@ export const Carousel: React.FC<{ children: ReactElement[] }> = ({ children }) =
             forwardBtnProps={{
                 style: {
                     alignSelf: 'center',
-                    background: 'transparent',
+                    background: '#5c76a1',
                     border: 'none',
                     borderRadius: '50%',
-                    color: '#2978ff',
+                    color: 'white',
                     cursor: 'pointer',
                     fontSize: '20px',
                     height: 30,
@@ -34,10 +36,10 @@ export const Carousel: React.FC<{ children: ReactElement[] }> = ({ children }) =
             backwardBtnProps={{
                 style: {
                     alignSelf: 'center',
-                    background: 'transparent',
+                    background: '#5c76a1',
                     border: 'none',
                     borderRadius: '50%',
-                    color: '#2978ff',
+                    color: 'white',
                     cursor: 'pointer',
                     fontSize: '20px',
                     height: 30,
