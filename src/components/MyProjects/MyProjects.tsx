@@ -1,6 +1,5 @@
 import { Box, Typography } from '@mui/material';
 import React from 'react';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import BgImg2 from '../../common/img/BgImage2.jpg';
 import { useFindSizeBlock } from '../../hooks/useFindSizeBlock';
@@ -13,7 +12,7 @@ export const MyProjects: React.FC<{ isDesktop: boolean }> = ({ isDesktop }) => {
 
     return (
         <Box sx={{ mb: 2, position: 'sticky' }} ref={ref}>
-            <LazyLoadImage src={BgImg2} alt="background" className="Background" style={{ height: height + 25 }} />
+            <img src={BgImg2} alt="background" className="Background" style={{ height: height + 25 }} />
             <Typography variant="h4" sx={{ textAlign: 'center', mb: 2 }}>
                 Мои проекты
             </Typography>

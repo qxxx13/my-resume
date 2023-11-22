@@ -5,7 +5,6 @@ import TelegramIcon from '@mui/icons-material/Telegram';
 import WorkIcon from '@mui/icons-material/Work';
 import { Box, Stack, Tooltip, Typography } from '@mui/material';
 import React from 'react';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import BgImage from '../../common/img/BgImage.jpg';
 import TrueSigmaImg from '../../common/img/TrueSigma.jpg';
@@ -24,7 +23,7 @@ export const Home: React.FC<{ isDesktop: boolean }> = ({ isDesktop }) => {
             className="MainPage"
             ref={ref}
         >
-            <LazyLoadImage
+            <img
                 src={BgImage}
                 alt="background"
                 className="Background"
