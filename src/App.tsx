@@ -19,7 +19,9 @@ export const App = () => {
                 <Fade duration={1000}>
                     <Home isDesktop={isDesktop} />
                     <AboutMe isDesktop={isDesktop} />
-                    <MyProjects isDesktop={isDesktop} />
+                </Fade>
+                <MyProjects isDesktop={isDesktop} />
+                <Fade duration={1000}>
                     <Skills isDesktop={isDesktop} />
                     <Experience isDesktop={isDesktop} />
                     <Footer />
